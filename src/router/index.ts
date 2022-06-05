@@ -18,8 +18,8 @@ const routes: Array<RouteRecordRaw> = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
-  routes
+  history: createWebHistory((window as any).__POWERED_BY_QIANKUN__?'/sub_vue/':process.env.BASE_URL),
+  routes,
 })
 
 export default router
